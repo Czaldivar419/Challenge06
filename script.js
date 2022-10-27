@@ -30,7 +30,7 @@ console.log(trimState);
 
 // Fetch lon/lat data to create respective varibles for use for forecasts----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-geoData = "http://api.openweathermap.org/geo/1.0/direct?q=" + trimCity + "," + trimState + "," + "&limit=" + "1" + "&appid=" + apiKey;
+geoData = "https://api.openweathermap.org/geo/1.0/direct?q=" + trimCity + "," + trimState + "," + "&limit=" + "1" + "&appid=" + apiKey;
 
 fetch(geoData)
     .then(function (response) {
@@ -76,7 +76,7 @@ fetch(geoData)
 
 // Use lon/lat varibles in fetch request for 5 day forecast --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-forecastURL= "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial";
+forecastURL= "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial";
 
 fetch(forecastURL)
 .then(function (response) {
